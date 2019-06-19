@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mt-5 mx-auto">
+
+
+<form class="form" (submit)="add(taskTitle.value); taskTitle.value=''">
+<div class="form-group">
+  <input #taskTitle type="text" class="form-control" placeholder="Unesi novi zadatak">
+</div>
+<input type="submit" value="DODAJ" class="btn btn-success btn-lg btn-block">
+</form>
+
+<table class="table"> 
+<tr *ngFor="let task of tasks">
+<td class="test-left">  
+  <a (click)="edit(task)">
+    <span *ngIf="task!==editTask">{{task.title}}</span>
+    <input *ngIf="task===editTask" [(ngModel)]="task.title" (blur)="update()" (keyup.enter)="update()" >
+  </a>
+</td>
+
+ <td class="text-right">
+   <button class="btn btn-danger" (click)="delete(task)">
+     Brisi
+   </button>
+ </td>
+</tr>
+</table>
+
+<div class="card text center" style="color: blue">
+<span class="">Klikni na zadatak ako zelite da ga editujete.</span>
+</div>
+
+<strong>Aleksandar Jovanović</strong>
+</div>
+</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="jumbotron mt-5">
+    <div class="col-sm-8 mx-auto">
+      <h1 class="text-center">PROFIL</h1>
+    </div>
+    <table class="table col-md-6 mx-auto">
+      <tr>
+        <td>ID</td>
+        <td>{{ details?.user.id }}</td>
+      </tr>
+      <tr>
+        <td>Ime</td>
+        <td>{{ details?.user.name }}</td>
+      </tr>
+      <tr>
+        <td>Prezime</td>
+        <td>{{ details?.user.surname }}</td>
+      </tr>
+      <tr>
+        <td>Zanimanje</td>
+        <td>{{ details?.user.position }}</td>
+      </tr>
+      <tr>
+        <td>Pol</td>
+        <td>{{ details?.user.sex }}</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>{{ details?.user.email }}</td>
+      </tr>
+      <tr>
+          <td>Vreme kreiranja naloga</td>
+          <td>{{ details?.user.created_at }}</td>
+        </tr>
+    </table>
+  </div>
+</div>
